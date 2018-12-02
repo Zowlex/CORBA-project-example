@@ -1,0 +1,19 @@
+module CorbaQuiz{
+struct Quiz{
+long id;
+string question;
+string answer_1;
+string answer_2;
+string answer_3;
+string answer_4;
+long correct_answer;
+};
+typedef Quiz qz;
+typedef sequence <qz> qzsequence;
+interface App{
+void setQuiz(in qz q);
+void updateQuiz(in qz q);
+qzsequence getQuiz();
+qz getQuestion(in long id);
+};
+};
